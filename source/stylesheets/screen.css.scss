@@ -371,13 +371,19 @@ html, body {
 
   h2 {
     @extend %header-font;
-    font-size: 19px;
+    font-size: 20px;
     margin-top: 4em;
     margin-bottom: 0;
     border-top: 1px solid #ccc;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
     background-image: linear-gradient(to bottom, rgba(#fff, 0.2), rgba(#fff, 0));
+
+    div {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #939393;
+    }
   }
 
   // h2s right after h1s should bump right up
@@ -387,16 +393,25 @@ html, body {
     border-top: none;
   }
 
+  // TODO: how do mixins work?
   h3, h4, h5, h6 {
-    @extend %header-font;
-    font-size: 15px;
-    margin-top: 2.5em;
-    margin-bottom: 0.8em;
+    font-size: 20px;
+    margin-top: 4em;
+    margin-bottom: 0;
+    border-top: 1px solid #ccc;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    background-image: linear-gradient(to bottom, rgba(#fff, 0.2), rgba(#fff, 0));
+
+    div {
+      font-size: 12px;
+      text-transform: uppercase;
+      span{
+        color: #939393;
+      }
+    }
   }
 
-  h4, h5, h6 {
-    font-size: 10px;
-  }
 
   hr {
     margin: 2em 0;
@@ -555,7 +570,7 @@ html, body {
 
   blockquote {
     &>p {
-      background-color: $code-annotation-bg;
+      background-color: $nav-bg;
       padding: $code-annotation-padding 2em;
       color: #eee;
     }
@@ -624,4 +639,8 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+.content a.anchorjs-link {
+  color: $nav-active-bg;
 }
