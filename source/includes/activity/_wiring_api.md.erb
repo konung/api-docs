@@ -157,9 +157,12 @@ In this example, if a sign in request can't be handled via Omniauth (because the
 
 > Use the `Track()` helper to reference a track.
 
+
+
 ```ruby
 <%= snippet :activity, "track-ref", collapse: "methods", file: "docs/track_test.rb" %>
 ```
+> <%= github_link :activity, "track-ref", collapse: "methods", file: "docs/track_test.rb" %>
 
 Connecting tasks specifically to other tasks [via IDs](#activity-output-id) is the right choice if you "know" what will be the next step. However, often, you don't want to hard-wire steps to each other but place them on tracks, and let the activity take care of connecting the tasks in the right order.
 
